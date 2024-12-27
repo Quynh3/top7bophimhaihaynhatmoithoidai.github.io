@@ -1,0 +1,146 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-image: url('https://images.unsplash.com/photo-1517841905240-472988babdf9'); 
+    background-size: cover; /* Hình ảnh sẽ phủ kín toàn bộ phần header */
+    background-position: center; /* Đảm bảo hình ảnh căn giữa */
+    color: white;
+    padding: 120px 20px; /* Tăng padding để tạo không gian cho văn bản */
+    text-align: center;
+    border-bottom: 5px solid #f8b400;
+    background-attachment: fixed; /* Đảm bảo hình nền cố định khi cuộn trang */
+}
+
+header h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4); /* Thêm bóng cho chữ để dễ đọc hơn trên nền ảnh */
+}
+
+header p {
+    font-size: 1.2rem;
+    color: #dcdcdc;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.5;
+}
+
+/* Phần chính của trang */
+main {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 20px;
+}
+
+.movie-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.movie {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+.movie img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.movie h2 {
+    margin: 15px 0;
+    font-size: 1.5rem;
+    color: #f8b400;
+}
+
+.movie p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Nút Xem Trailer */
+.movie button {
+    background-color: #228B22; /* Xanh lá cây đậm sáng */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.movie button:hover {
+    background-color: #1e7d1e; /* Màu đậm hơn khi hover */
+}
+
+/* Nội dung phụ */
+.side-content {
+    flex: 2; /* Chiếm 2 phần không gian */
+    display: grid; /* Hiển thị dưới dạng lưới */
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* Tạo ô vuông */
+    gap: 10px; /* Khoảng cách giữa các ô */
+}
+
+/* Ô lưới của nội dung phụ */
+.side-content .grid-item {
+    background-color: #800080; /* Màu tím rực */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    padding: 10px;
+    transition: transform 0.3s ease;
+}
+
+.side-content .grid-item:hover {
+    transform: scale(1.05); /* Hiệu ứng phóng to khi hover */
+}
+
+/* Ảnh trong ô lưới */
+.side-content .grid-item img {
+    width: 100%; /* Chiều rộng ảnh */
+    height: 100px; /* Đảm bảo ảnh vuông */
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* Text của nội dung phụ */
+.side-content .grid-item a {
+    display: block;
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #fff; /* Màu trắng nổi bật */
+    text-decoration: none;
+    text-overflow: ellipsis; /* Xử lý tràn chữ */
+    overflow: hidden;
+    white-space: nowrap; /* Không cho xuống dòng */
+}
+
+.side-content .grid-item a:hover {
+    text-decoration: underline;
+}
